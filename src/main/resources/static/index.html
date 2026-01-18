@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<header class="navbar">
+    <h1>Student Management System</h1>
+    <p>Admin Dashboard</p>
+</header>
+
+<div class="container">
+
+    <!-- DASHBOARD -->
+    <section class="dashboard">
+        <div class="dash-card">
+            <h3>Total Students</h3>
+            <p id="totalStudents">0</p>
+        </div>
+        <div class="dash-card">
+            <h3>Courses</h3>
+            <p>Multiple</p>
+        </div>
+        <div class="dash-card">
+            <h3>Status</h3>
+            <p>Active</p>
+        </div>
+    </section>
+
+    <!-- STUDENT FORM -->
+    <section class="card">
+        <h2>Student Registration</h2>
+
+        <div class="form-grid">
+            <input type="number" id="id" placeholder="Student ID (for update)">
+            <input type="text" id="name" placeholder="Student Name">
+            <input type="email" id="email" placeholder="Email">
+            <input type="text" id="course" placeholder="Course">
+        </div>
+
+        <div class="btn-group">
+            <button class="btn-primary" onclick="addStudent()">Add Student</button>
+            <button class="btn-warning" onclick="updateStudent()">Update Student</button>
+        </div>
+    </section>
+
+    <!-- SEARCH -->
+    <section class="card">
+        <h2>Search Student</h2>
+        <input type="number" id="searchId" placeholder="Enter Student ID">
+        <button class="btn-secondary" onclick="getStudentById()">Search</button>
+        <p id="singleResult" class="result"></p>
+    </section>
+
+    <!-- STUDENT TABLE -->
+    <section class="card">
+        <h2>Student Records</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Course</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody id="studentTable"></tbody>
+        </table>
+    </section>
+
+</div>
+
+<footer>
+    <p>© 2026 Student Management System | Mini Project</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
