@@ -26,4 +26,4 @@ frontend–backend integration using REST APIs.
 1. Clone the repository
 2. Configure MySQL database in application.properties
 3. Run Spring Boot application
-4. Open http://localhost:8080/index.html
+4. Open http://localhost:8888/index.html
